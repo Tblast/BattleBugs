@@ -2,7 +2,7 @@ import random
 from random import choice
 
 monster = {
-    "name": "Bob the Orc",
+    "name": "Killer Mantis",
     "hp": 10,
     "attacks": {
         "weak": {
@@ -18,7 +18,7 @@ monster = {
 }
 
 player = {
-    "name": "Player",
+    "name": "Ant Boy",
     "hp": 20,
     "attacks": {
         "weak": {
