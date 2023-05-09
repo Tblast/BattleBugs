@@ -1,38 +1,12 @@
+import json
 import random
 from random import choice
 
-monster = {
-    "name": "Killer Mantis",
-    "hp": 10,
-    "attacks": {
-        "weak": {
-            "to_hit": .8,
-            "damage": range(1, 4),
+with open('player.json', 'r') as f:
+    player = json.load(f)
 
-        },
-        "strong": {
-            "to_hit": .4,
-            "damage": range(3, 8),
-        }
-    }
-}
-
-player = {
-    "name": "Ant Boy",
-    "hp": 20,
-    "attacks": {
-        "weak": {
-            "to_hit": .8,
-            "damage": range(1, 4),
-
-        },
-        "strong": {
-            "to_hit": .4,
-            "damage": range(3, 8),
-        }
-    }
-}
-
+with open('monster.json', 'r') as f:
+    monster = json.load(f)
 
 def fight(p1, p2):
     while all([p1["hp"], p2["hp"]]) > 0:
